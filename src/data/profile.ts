@@ -82,11 +82,28 @@ export const projects: Project[] = [
   {
     name: "HelpDesk Pro",
     description:
-      "Sistema de gestão e controle de chamados de suporte, com autenticação de usuários, CRUD completo e fluxo de atendimento, com testes E2E executados em CI.",
-    stack: ["React", "Node.js", "PostgreSQL", "Cypress"],
-    highlights: ["Autenticação de usuários", "CRUD completo", "Testes E2E em CI"],
+      "Sistema de gestão e controle de chamados de suporte, com autenticação de usuários, CRUD completo e fluxo de atendimento. 90 testes automatizados em 3 camadas (unitários, API e E2E), executados em CI com GitHub Actions e evidências de execução.",
+    stack: ["React", "Node.js", "PostgreSQL", "Cypress", "Supertest"],
+    highlights: [
+      "Autenticação de usuários",
+      "CRUD completo",
+      "Testes unitários, de API e E2E",
+      "CI com evidências",
+    ],
     featured: true,
-    code: "https://github.com/ArthurSkl/HelpDesk",
+    code: "https://github.com/ArthurSkl/helpdesk-pro",
+  },
+  {
+    name: "Plano de Qualidade - HelpDesk Pro",
+    description:
+      "Documentação de QA do projeto HelpDesk Pro: estratégia de testes em 3 camadas (unitários, API e E2E), stack utilizada, critérios de aceite, execução em CI e evidências de testes documentadas.",
+    stack: ["node:test", "Supertest", "Cypress"],
+    highlights: [
+      "Estratégia de testes em 3 camadas",
+      "Critérios de aceite",
+      "Evidências documentadas",
+    ],
+    code: "https://github.com/ArthurSkl/helpdesk-pro/blob/main/docs/QA.md",
   },
   {
     name: "ETG Senac",
