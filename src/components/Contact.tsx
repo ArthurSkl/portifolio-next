@@ -44,7 +44,7 @@ export function Contact() {
     {
       label: "Telefone",
       value: profile.phone,
-      href: `tel:${profile.phone.replace(/\s/g, "")}`,
+      href: `tel:+55${profile.phone.replace(/\D/g, "")}`,
       icon: Phone,
     },
   ];
@@ -53,9 +53,9 @@ export function Contact() {
     <section id="contato" className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          badge="Contato"
-          title="Vamos trabalhar juntos?"
-          description="Estou aberto a oportunidades em desenvolvimento full stack, QA e análise de dados."
+          badge="04 // Canais de Contato"
+          title="Vamos conversar sobre a sua equipe?"
+          description="Aberto a oportunidades como Desenvolvedor Full Stack, QA / Analista de Testes e Automação."
         />
 
         <div className="grid gap-12 lg:grid-cols-2">

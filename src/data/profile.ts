@@ -8,15 +8,22 @@ export const profile = {
   phone: "(67) 99133-3349",
   linkedin: "https://www.linkedin.com/in/arthurfrantz",
   github: "https://github.com/ArthurSkl",
-  portfolio: "https://portfolio-devfrantz.vercel.app",
+  portfolio: "https://portifolio-next-flax.vercel.app",
   summary:
-    "Desenvolvedor Full Stack e QA com cerca de 2 anos de experiência como Desenvolvedor de Software, formado em Engenharia de Software e Técnico em Desenvolvimento de Sistemas. Atuei em sustentação de sistemas, correção de bugs e desenvolvimento de aplicações full-stack com React, Node.js e PostgreSQL, além de testes automatizados com Cypress e análise de dados com Power BI. Perfil analítico e orientado a resultados, com foco em qualidade, resolução de problemas e melhoria contínua.",
+    "Desenvolvedor Full Stack e QA com cerca de 2 anos de experiência como Desenvolvedor de Software. Bacharel em Engenharia de Software, Técnico em Desenvolvimento de Sistemas e pós-graduando Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA). Atuei em sustentação de sistemas, correção de bugs e desenvolvimento de aplicações full-stack com React, Node.js e PostgreSQL, além de automação de testes em múltiplas camadas (unitários, API e E2E com Cypress) e análise de dados com Power BI. Perfil analítico e orientado a resultados, com foco em qualidade de software, prevenção de defeitos e melhoria contínua.",
   facts: [
     { label: "Localização", value: "Campo Grande - MS, Brasil" },
     { label: "Experiência", value: "~2 anos como Desenvolvedor de Software" },
-    { label: "Formação", value: "Bacharelado em Engenharia de Software" },
+    {
+      label: "Formação",
+      value: "Engenharia de Software & Técnico em Desenv. de Sistemas",
+    },
+    {
+      label: "Pós-Graduação",
+      value: "Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA)",
+    },
     { label: "Certificações", value: "AI-900 Azure, BPM, Trilha Power BI (37h)" },
-    { label: "Foco atual", value: "Full Stack, QA e Análise de Dados" },
+    { label: "Foco atual", value: "Full Stack, QA & Automação de Testes" },
   ],
 };
 
@@ -54,7 +61,14 @@ export const skillCategories: SkillCategory[] = [
   {
     icon: "bug",
     title: "Qualidade & Testes",
-    skills: ["Cypress", "Selenium", "JUnit", "Testes funcionais e de aceitação"],
+    skills: [
+      "Cypress",
+      "Supertest",
+      "Selenium",
+      "JUnit",
+      "Testes Unitários, API e E2E",
+      "Testes Funcionais e de Aceitação",
+    ],
   },
   {
     icon: "chart",
@@ -92,6 +106,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     code: "https://github.com/ArthurSkl/helpdesk-pro",
+    demo: "https://helpdesk-pro-chi.vercel.app",
   },
   {
     name: "Plano de Qualidade - HelpDesk Pro",
@@ -106,18 +121,91 @@ export const projects: Project[] = [
     code: "https://github.com/ArthurSkl/helpdesk-pro/blob/main/docs/QA.md",
   },
   {
+    name: "Suíte de Testes E2E — Cypress",
+    description:
+      "Automação de testes End-to-End cobrindo fluxos críticos de e-commerce (autenticação, carrinho de compras e checkout), utilizando comandos customizados, fixtures, documentação de casos de teste e execução contínua em CI.",
+    stack: ["Cypress", "JavaScript", "GitHub Actions"],
+    highlights: [
+      "Fluxos de login, carrinho e checkout",
+      "Custom Commands e Fixtures",
+      "Casos de teste documentados (QA)",
+      "Pipeline CI no GitHub Actions",
+    ],
+    code: "https://github.com/ArthurSkl/testes-e2e-cypress",
+  },
+  {
+    name: "Automação Web — Selenium & JUnit",
+    description:
+      "Projeto de automação de testes funcionais e de interface web com Java, Selenium WebDriver e JUnit, aplicando boas práticas de validação de cenários e execução automatizada em pipeline de integração contínua.",
+    stack: ["Java", "Selenium WebDriver", "JUnit", "GitHub Actions"],
+    highlights: [
+      "Testes automatizados de UI",
+      "Asserções e relatórios com JUnit",
+      "Execução integrada ao GitHub Actions",
+    ],
+    code: "https://github.com/ArthurSkl/testes-automatizados-selenium-junit",
+  },
+  {
     name: "ETG Senac",
     description:
-      "Sistema de gestão escolar para o SENAC Gastronomia, com controle de turmas, professores e relatórios.",
+      "Sistema de gestão escolar para o SENAC Gastronomia, com controle de turmas, professores, perfis de acesso e relatórios.",
     stack: ["PHP", "MySQL", "JavaScript"],
-    highlights: [],
+    highlights: [
+      "Gestão de turmas e docentes",
+      "Geração de relatórios gerenciais",
+      "Modelagem relacional em MySQL",
+    ],
+    code: "https://github.com/ArthurSkl/ETG-Senac",
   },
   {
     name: "Sistema de Controle de Equipamentos",
     description:
       "Aplicação full-stack de gestão de equipamentos, salas, professores, níveis logísticos e permissões de acesso. Desenvolvida em projeto interno da Multilab.",
     stack: ["React", "Node.js", "PostgreSQL"],
-    highlights: [],
+    highlights: [
+      "Controle de acesso por níveis (RBAC)",
+      "Rastreabilidade de equipamentos e salas",
+      "API RESTful integrada ao PostgreSQL",
+    ],
+  },
+];
+
+export type JourneyItem = {
+  period: string;
+  role: string;
+  institution: string;
+  type: "work" | "education";
+  description: string;
+  tags: string[];
+};
+
+export const journey: JourneyItem[] = [
+  {
+    period: "Em andamento",
+    role: "Pós-Graduação Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA)",
+    institution: "Especialização Acadêmica",
+    type: "education",
+    description:
+      "Aprofundamento em estratégia de qualidade em times ágeis, pirâmide de testes, automação E2E/API/Unit, integração contínua (CI/CD) e prevenção de defeitos.",
+    tags: ["Testes Ágeis", "Automação de QA", "CI/CD", "Qualidade de Software"],
+  },
+  {
+    period: "~2 anos de atuação",
+    role: "Desenvolvedor de Software Full Stack & QA",
+    institution: "Experiência Profissional & Projetos Internos (Multilab / SENAC)",
+    type: "work",
+    description:
+      "Desenvolvimento de aplicações full-stack, sustentação de sistemas em produção, investigação e correção de bugs, modelagem de banco de dados e implementação de testes automatizados e relatórios analíticos.",
+    tags: ["React", "Node.js", "PostgreSQL", "PHP", "Cypress", "Power BI"],
+  },
+  {
+    period: "Concluído",
+    role: "Bacharelado em Engenharia de Software & Técnico em Desenvolvimento de Sistemas",
+    institution: "Formação Superior & Técnica",
+    type: "education",
+    description:
+      "Base sólida em engenharia de requisitos, arquitetura de software, estruturas de dados, bancos de dados relacionais/não-relacionais e ciclo de vida de desenvolvimento.",
+    tags: ["Engenharia de Software", "Arquitetura", "SQL", "Boas Práticas"],
   },
 ];
 
