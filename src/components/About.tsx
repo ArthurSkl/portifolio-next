@@ -8,8 +8,9 @@ import { journey, profile } from "@/data/profile";
 const factIcons = {
   Localização: MapPin,
   Experiência: Briefcase,
-  Formação: GraduationCap,
+  Graduação: GraduationCap,
   "Pós-Graduação": GraduationCap,
+  "Formação Técnica": GraduationCap,
   Certificações: BadgeCheck,
   "Foco atual": Target,
 } as const;

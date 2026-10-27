@@ -10,17 +10,21 @@ export const profile = {
   github: "https://github.com/ArthurSkl",
   portfolio: "https://portifolio-next-flax.vercel.app",
   summary:
-    "Desenvolvedor Full Stack e QA com cerca de 2 anos de experiência como Desenvolvedor de Software. Bacharel em Engenharia de Software, Técnico em Desenvolvimento de Sistemas e pós-graduando Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA). Atuei em sustentação de sistemas, correção de bugs e desenvolvimento de aplicações full-stack com React, Node.js e PostgreSQL, além de automação de testes em múltiplas camadas (unitários, API e E2E com Cypress) e análise de dados com Power BI. Perfil analítico e orientado a resultados, com foco em qualidade de software, prevenção de defeitos e melhoria contínua.",
+    "Desenvolvedor Full Stack e QA com cerca de 2 anos de experiência como Desenvolvedor de Software. Bacharel em Engenharia de Software, Técnico em Desenvolvimento de Sistemas pelo SENAC e pós-graduando Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA). Atuei em sustentação de sistemas, correção de bugs e desenvolvimento de aplicações full-stack com React, Node.js e PostgreSQL, além de automação de testes em múltiplas camadas (unitários, API e E2E com Cypress) e análise de dados com Power BI. Perfil analítico e orientado a resultados, com foco em qualidade de software, prevenção de defeitos e melhoria contínua.",
   facts: [
     { label: "Localização", value: "Campo Grande - MS, Brasil" },
     { label: "Experiência", value: "~2 anos como Desenvolvedor de Software" },
     {
-      label: "Formação",
-      value: "Engenharia de Software & Técnico em Desenv. de Sistemas",
+      label: "Graduação",
+      value: "Bacharelado em Engenharia de Software",
     },
     {
       label: "Pós-Graduação",
       value: "Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA)",
+    },
+    {
+      label: "Formação Técnica",
+      value: "Técnico em Desenvolvimento de Sistemas — SENAC",
     },
     { label: "Certificações", value: "AI-900 Azure, BPM, Trilha Power BI (37h)" },
     { label: "Foco atual", value: "Full Stack, QA & Automação de Testes" },
@@ -200,12 +204,21 @@ export const journey: JourneyItem[] = [
   },
   {
     period: "Concluído",
-    role: "Bacharelado em Engenharia de Software & Técnico em Desenvolvimento de Sistemas",
-    institution: "Formação Superior & Técnica",
+    role: "Bacharelado em Engenharia de Software",
+    institution: "Ensino Superior",
     type: "education",
     description:
-      "Base sólida em engenharia de requisitos, arquitetura de software, estruturas de dados, bancos de dados relacionais/não-relacionais e ciclo de vida de desenvolvimento.",
+      "Formação em engenharia de requisitos, arquitetura de software, estruturas de dados, bancos de dados relacionais/não-relacionais, qualidade e ciclo de vida de desenvolvimento.",
     tags: ["Engenharia de Software", "Arquitetura", "SQL", "Boas Práticas"],
+  },
+  {
+    period: "Concluído",
+    role: "Técnico em Desenvolvimento de Sistemas",
+    institution: "SENAC",
+    type: "education",
+    description:
+      "Formação prática intensiva em lógica de programação, desenvolvimento web full-stack, modelagem de banco de dados e construção de projetos aplicados (como o sistema ETG Senac).",
+    tags: ["SENAC", "Desenvolvimento Web", "PHP", "JavaScript", "MySQL"],
   },
 ];
 
