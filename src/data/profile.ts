@@ -1,7 +1,7 @@
 export const profile = {
   name: "Arthur Augusto Coelho Frantz",
   shortName: "Arthur Frantz",
-  role: "Desenvolvedor Full Stack & QA",
+  role: "Desenvolvedor Full Stack & Analista de QA",
   roles: ["Full Stack", "QA & Testes Automatizados", "Análise de Dados"],
   location: "Campo Grande - MS, Brasil",
   email: "arthursklt@hotmail.com",
@@ -10,24 +10,23 @@ export const profile = {
   github: "https://github.com/ArthurSkl",
   portfolio: "https://portifolio-next-flax.vercel.app",
   summary:
-    "Desenvolvedor Full Stack e QA com cerca de 2 anos de experiência como Desenvolvedor de Software. Bacharel em Engenharia de Software, Técnico em Desenvolvimento de Sistemas pelo SENAC e pós-graduando Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA). Atuei em sustentação de sistemas, correção de bugs e desenvolvimento de aplicações full-stack com React, Node.js e PostgreSQL, além de automação de testes em múltiplas camadas (unitários, API e E2E com Cypress) e análise de dados com Power BI. Perfil analítico e orientado a resultados, com foco em qualidade de software, prevenção de defeitos e melhoria contínua.",
+    "Engenheiro de Software (Estácio), Pós-graduando Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA) e Técnico em Desenvolvimento de Sistemas pelo SENAC. Com mais de 2 anos de experiência profissional como Desenvolvedor Full Stack na Multlab e atuação contínua em projetos de engenharia e qualidade, desenvolvo aplicações completas com React, Next.js, Node.js e PostgreSQL e estruturo suítes de testes automatizados em 3 camadas (unitários, API e E2E com Cypress e Selenium) integradas em pipelines de CI/CD.",
   facts: [
-    { label: "Localização", value: "Campo Grande - MS, Brasil" },
-    { label: "Experiência", value: "~2 anos como Desenvolvedor de Software" },
-    {
-      label: "Graduação",
-      value: "Bacharelado em Engenharia de Software",
-    },
+    { label: "Localização", value: "Campo Grande - MS, Brasil (Remoto / Híbrido / Presencial)" },
+    { label: "Experiência", value: "+2 anos em Desenvolvimento Full Stack, Sustentação & QA" },
     {
       label: "Pós-Graduação",
       value: "Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA)",
     },
     {
-      label: "Formação Técnica",
-      value: "Técnico em Desenvolvimento de Sistemas — SENAC",
+      label: "Graduação",
+      value: "Bacharelado em Engenharia de Software — Estácio (Ago/2025)",
     },
-    { label: "Certificações", value: "AI-900 Azure, BPM, Trilha Power BI (37h)" },
-    { label: "Foco atual", value: "Full Stack, QA & Automação de Testes" },
+    {
+      label: "Formação Técnica",
+      value: "Técnico em Desenvolvimento de Sistemas — SENAC (Fev/2024)",
+    },
+    { label: "Foco atual", value: "Desenvolvimento Full Stack & Automação de Testes (QA)" },
   ],
 };
 
@@ -40,6 +39,52 @@ export const contact = {
   portfolio: profile.portfolio,
 };
 
+export type Certification = {
+  title: string;
+  issuer: string;
+  hours?: string;
+  credential?: string;
+  url?: string;
+};
+
+export const certifications: Certification[] = [
+  {
+    title: "Aplicação da Melhoria Contínua (Modelagem de Dados, Sistemas e Métodos Ágeis)",
+    issuer: "Universidade Estácio de Sá",
+    hours: "330h",
+    url: "https://certificado.estacio.br/7aaae4b7cabe6f7852ae6d1",
+  },
+  {
+    title: "Programação e Modelagem de Sistemas de Informação",
+    issuer: "Universidade Estácio de Sá",
+    hours: "286h",
+    url: "https://certificado.estacio.br/a559f3db87601a5c59f2ad5",
+  },
+  {
+    title: "Gerência de Projetos de T.I. & Medidas de Esforço de Software",
+    issuer: "Universidade Estácio de Sá",
+    hours: "198h",
+    url: "https://certificado.estacio.br/394d0c4558a80fe319f3368",
+  },
+  {
+    title: "AI-900 — Fundamentos de Inteligência Artificial no Microsoft Azure",
+    issuer: "Fundação Bradesco & Microsoft",
+    hours: "16h",
+    credential: "D64A305D-9B4A-44C4-99E2-8FF2F8C3F445",
+  },
+  {
+    title: "Trilha de Conhecimento: Fundamentos do Power BI (ETL, DAX & Dashboards)",
+    issuer: "Fundação Bradesco",
+    hours: "37h",
+  },
+  {
+    title: "Especialista em Mapeamento de Processos de Negócios (BPM) & Administração de BD",
+    issuer: "Udemy / Fundação Bradesco",
+    hours: "19h",
+    url: "https://ude.my/UC-136dffac-dade-4fb9-b7b6-2020a4d58c8f",
+  },
+];
+
 export type SkillCategory = {
   icon: string;
   title: string;
@@ -50,39 +95,39 @@ export const skillCategories: SkillCategory[] = [
   {
     icon: "code",
     title: "Frontend",
-    skills: ["HTML", "CSS", "JavaScript", "React", "React Native"],
+    skills: ["React", "Next.js", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 & CSS3", "React Native"],
   },
   {
     icon: "server",
-    title: "Backend",
-    skills: ["Node.js", "Express", "PHP", "APIs REST"],
+    title: "Backend & APIs",
+    skills: ["Node.js", "Express", "PHP", "APIs RESTful", "Autenticação JWT"],
   },
   {
     icon: "database",
     title: "Banco de Dados",
-    skills: ["SQL", "PostgreSQL", "MySQL", "MongoDB"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Modelagem SQL"],
   },
   {
     icon: "bug",
-    title: "Qualidade & Testes",
+    title: "Qualidade & Automação (QA)",
     skills: [
-      "Cypress",
-      "Supertest",
-      "Selenium",
-      "JUnit",
-      "Testes Unitários, API e E2E",
-      "Testes Funcionais e de Aceitação",
+      "Cypress (E2E)",
+      "Selenium WebDriver",
+      "Supertest (API)",
+      "JUnit & node:test",
+      "Pirâmide de Testes (3 Camadas)",
+      "Planos de Teste & BDD",
     ],
   },
   {
     icon: "chart",
-    title: "Análise de Dados",
-    skills: ["Power BI", "Excel", "Modelagem de Dados", "Visualização de Dados"],
+    title: "Análise de Dados & BI",
+    skills: ["Power BI", "Modelagem DAX", "Power Query (ETL)", "Dashboards Executivos"],
   },
   {
     icon: "tool",
-    title: "Ferramentas & Métodos",
-    skills: ["Git", "GitHub Actions", "Vite", "Scrum", "Kanban"],
+    title: "DevOps, CI/CD & Métodos",
+    skills: ["Git & GitHub", "GitHub Actions (CI/CD)", "Scrum & Kanban", "BPM", "Troubleshooting"],
   },
 ];
 
@@ -164,7 +209,7 @@ export const projects: Project[] = [
   {
     name: "Sistema de Controle de Equipamentos",
     description:
-      "Aplicação full-stack de gestão de equipamentos, salas, professores, níveis logísticos e permissões de acesso. Desenvolvida em projeto interno da Multilab.",
+      "Aplicação full-stack de gestão de equipamentos, salas, professores, níveis logísticos e permissões de acesso.",
     stack: ["React", "Node.js", "PostgreSQL"],
     highlights: [
       "Controle de acesso por níveis (RBAC)",
@@ -185,45 +230,54 @@ export type JourneyItem = {
 
 export const journey: JourneyItem[] = [
   {
-    period: "Em andamento",
+    period: "Jun 2024 — Atual",
+    role: "Desenvolvedor Full Stack & Analista de QA (Automação de Testes)",
+    institution: "Projetos de Engenharia de Software & QA Automation",
+    type: "work",
+    description:
+      "Desenvolvimento de aplicações web full-stack (React, Next.js, Node.js, PostgreSQL) e implementação de arquiteturas de testes automatizados em 3 camadas (Unitários, API com Supertest e E2E com Cypress e Selenium) integradas em pipelines de CI/CD no GitHub Actions.",
+    tags: ["React", "Next.js", "Node.js", "PostgreSQL", "Cypress", "Selenium", "GitHub Actions"],
+  },
+  {
+    period: "2026 — Em andamento",
     role: "Pós-Graduação Lato Sensu em Testes Ágeis e Automação de Qualidade de Software (QA)",
     institution: "Especialização Acadêmica",
     type: "education",
     description:
-      "Aprofundamento em estratégia de qualidade em times ágeis, pirâmide de testes, automação E2E/API/Unit, integração contínua (CI/CD) e prevenção de defeitos.",
+      "Especialização focada em Engenharia de Qualidade em times ágeis, pirâmide de testes (Unit, API e E2E), automação contínua em CI/CD, gestão de defeitos e métricas de qualidade.",
     tags: ["Testes Ágeis", "Automação de QA", "CI/CD", "Qualidade de Software"],
   },
   {
-    period: "~2 anos de atuação",
-    role: "Desenvolvedor de Software Full Stack & QA",
-    institution: "Experiência Profissional & Projetos Internos (Multilab / SENAC)",
+    period: "Mar 2022 — Mai 2024 (2 anos e 2 meses)",
+    role: "Desenvolvedor Full Stack (Desenvolvimento, Sustentação & Qualidade)",
+    institution: "Multlab Produtos p/ Laboratórios Ltda. • Aracaju/SE (Remoto)",
     type: "work",
     description:
-      "Desenvolvimento de aplicações full-stack, sustentação de sistemas em produção, investigação e correção de bugs, modelagem de banco de dados e implementação de testes automatizados e relatórios analíticos.",
-    tags: ["React", "Node.js", "PostgreSQL", "PHP", "Cypress", "Power BI"],
+      "Atuação no desenvolvimento de soluções Full Stack, investigação e correção de bugs, otimizações de desempenho, integração com sistemas externos e sustentação técnica contínua dos sistemas web da empresa.",
+    tags: ["Node.js", "JavaScript", "SQL", "HTML5 & CSS3", "jQuery", "Git", "Troubleshooting"],
   },
   {
-    period: "Concluído",
+    period: "Mar 2021 — Ago 2025 (Concluído)",
     role: "Bacharelado em Engenharia de Software",
-    institution: "Ensino Superior",
+    institution: "Universidade Estácio de Sá",
     type: "education",
     description:
-      "Formação em engenharia de requisitos, arquitetura de software, estruturas de dados, bancos de dados relacionais/não-relacionais, qualidade e ciclo de vida de desenvolvimento.",
-    tags: ["Engenharia de Software", "Arquitetura", "SQL", "Boas Práticas"],
+      "Formação superior com certificações intermediárias em Aplicação da Melhoria Contínua (330h), Programação e Modelagem de Sistemas (286h) e Gerência de Projetos de T.I. (198h).",
+    tags: ["Engenharia de Software", "Modelagem de Dados", "Métodos Ágeis", "Gestão de Projetos"],
   },
   {
-    period: "Concluído",
+    period: "Out 2022 — Fev 2024 (Concluído)",
     role: "Técnico em Desenvolvimento de Sistemas",
-    institution: "SENAC",
+    institution: "SENAC Brasil",
     type: "education",
     description:
-      "Formação prática intensiva em lógica de programação, desenvolvimento web full-stack, modelagem de banco de dados e construção de projetos aplicados (como o sistema ETG Senac).",
-    tags: ["SENAC", "Desenvolvimento Web", "PHP", "JavaScript", "MySQL"],
+      "Formação técnica prática em desenvolvimento web full-stack, banco de dados relacionais, engenharia de requisitos e desenvolvimento do sistema interno para o SENAC Gastronomia.",
+    tags: ["SENAC", "Full Stack", "PHP", "JavaScript", "MySQL"],
   },
 ];
 
 export const navigation = [
-  { href: "#sobre", label: "Sobre" },
+  { href: "#sobre", label: "Trajetória" },
   { href: "#habilidades", label: "Habilidades" },
   { href: "#projetos", label: "Projetos" },
   { href: "#contato", label: "Contato" },
