@@ -50,48 +50,48 @@ export function Contact() {
   ];
 
   return (
-    <section id="contato" className="relative py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contato" className="relative py-16 sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           badge="04 // Canais de Contato"
           title="Vamos conversar sobre a sua equipe?"
           description="Aberto a oportunidades como Desenvolvedor Full Stack, QA / Analista de Testes e Automação."
         />
 
-        <div className="grid gap-12 lg:grid-cols-2">
-          <Reveal>
-            <div className="space-y-4">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-2">
+          <Reveal className="min-w-0">
+            <div className="space-y-3.5 sm:space-y-4">
               {channels.map((channel) => (
                 <a
                   key={channel.label}
                   href={channel.href}
                   target={channel.href.startsWith("http") ? "_blank" : undefined}
                   rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="group flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-sky-500/40 hover:shadow-glow dark:border-zinc-800 dark:bg-zinc-900/50"
+                  className="group flex items-center gap-3.5 rounded-2xl border border-zinc-200 bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-sky-500/40 hover:shadow-glow sm:gap-4 sm:p-5 dark:border-zinc-800 dark:bg-zinc-900/50"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-500/20">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-500/20 sm:h-11 sm:w-11">
                     <channel.icon size={18} />
                   </span>
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[11px] font-medium uppercase tracking-wider text-zinc-400 sm:text-xs dark:text-zinc-500">
                       {channel.label}
                     </p>
-                    <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+                    <p className="truncate text-sm font-semibold text-zinc-800 dark:text-zinc-200">
                       {channel.value}
                     </p>
                   </div>
                 </a>
               ))}
 
-              <div className="flex items-center gap-4 rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-900/50">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-500/20">
+              <div className="flex items-center gap-3.5 rounded-2xl border border-zinc-200 bg-white p-4 sm:gap-4 sm:p-5 dark:border-zinc-800 dark:bg-zinc-900/50">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-500/20 sm:h-11 sm:w-11">
                   <MapPin size={18} />
                 </span>
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+                <div className="min-w-0 flex-1">
+                  <p className="text-[11px] font-medium uppercase tracking-wider text-zinc-400 sm:text-xs dark:text-zinc-500">
                     Localização
                   </p>
-                  <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+                  <p className="break-words text-sm font-semibold text-zinc-800 dark:text-zinc-200">
                     {profile.location}
                   </p>
                 </div>
@@ -99,10 +99,10 @@ export function Contact() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.15}>
+          <Reveal delay={0.15} className="min-w-0">
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-zinc-200 bg-white p-8 dark:border-zinc-800 dark:bg-zinc-900/50"
+              className="rounded-2xl border border-zinc-200 bg-white p-5 sm:p-8 dark:border-zinc-800 dark:bg-zinc-900/50"
             >
               <h3 className="mb-6 text-lg font-semibold text-zinc-900 dark:text-white">
                 Envie uma mensagem

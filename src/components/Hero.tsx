@@ -146,42 +146,42 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-16"
+      className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-12 sm:pb-16"
     >
       <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_at_top_left,black_35%,transparent_80%)]" />
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-12">
-        <div className="grid items-center gap-12 lg:grid-cols-12">
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Coluna Esquerda: Identidade e Posicionamento */}
           <motion.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="lg:col-span-7"
+            className="min-w-0 lg:col-span-7"
           >
-            <motion.div variants={item} className="mb-6 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 font-mono text-xs font-medium text-emerald-700 dark:text-emerald-400">
-                <span className="relative flex h-2 w-2">
+            <motion.div variants={item} className="mb-5 flex flex-wrap items-center gap-2 sm:mb-6 sm:gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] font-medium text-emerald-700 sm:px-3.5 sm:text-xs dark:text-emerald-400">
+                <span className="relative flex h-2 w-2 shrink-0">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
                 </span>
-                Disponível para novas oportunidades
+                <span>Disponível para oportunidades</span>
               </span>
-              <span className="rounded-full border border-zinc-200 bg-zinc-100/80 px-3 py-1 font-mono text-xs text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-400">
+              <span className="rounded-full border border-zinc-200 bg-zinc-100/80 px-3 py-1 font-mono text-[11px] text-zinc-600 sm:text-xs dark:border-zinc-800 dark:bg-zinc-900/80 dark:text-zinc-400">
                 Eng. de Software • Pós em QA
               </span>
             </motion.div>
 
             <motion.p
               variants={item}
-              className="font-mono text-sm font-medium text-sky-600 dark:text-sky-400"
+              className="font-mono text-xs font-medium text-sky-600 sm:text-sm dark:text-sky-400"
             >
               Arthur Augusto Coelho Frantz
             </motion.p>
 
             <motion.h1
               variants={item}
-              className="mt-2 text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-6xl lg:leading-[1.08] dark:text-white"
+              className="mt-2 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl lg:leading-[1.08] dark:text-white"
             >
               Engenharia Full Stack com rigor de{" "}
               <span className="text-sky-500 dark:text-sky-400">Qualidade & QA.</span>
@@ -189,9 +189,9 @@ export function Hero() {
 
             <motion.div
               variants={item}
-              className="mt-4 font-mono text-base font-medium text-zinc-700 sm:text-xl dark:text-zinc-300"
+              className="mt-4 min-h-[3.25rem] font-mono text-sm font-medium text-zinc-700 sm:min-h-0 sm:text-xl dark:text-zinc-300"
             >
-              Atuação em:{" "}
+              <span className="block sm:inline">Atuação em: </span>
               <Typewriter
                 words={[
                   "Desenvolvimento Full Stack",
@@ -204,17 +204,20 @@ export function Hero() {
 
             <motion.p
               variants={item}
-              className="mt-6 max-w-xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400"
+              className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-600 sm:mt-6 sm:text-base dark:text-zinc-400"
             >
               Construo aplicações web completas com <strong>React, Node.js e PostgreSQL</strong> e
               garanto entregas confiáveis através de testes automatizados com{" "}
               <strong>Cypress, Supertest e Selenium</strong> integrados ao pipeline de CI.
             </motion.p>
 
-            <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-3.5">
+            <motion.div
+              variants={item}
+              className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3.5"
+            >
               <a
                 href="#projetos"
-                className="group inline-flex items-center gap-2 rounded-xl bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-sky-600"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-sky-600 sm:w-auto"
               >
                 Explorar projetos e QA
                 <ArrowRight
@@ -224,7 +227,7 @@ export function Hero() {
               </a>
               <a
                 href="#contato"
-                className="inline-flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/80 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-sky-500/60 hover:text-sky-600 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-200 dark:hover:text-sky-400"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white/80 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-sky-500/60 hover:text-sky-600 sm:w-auto dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-200 dark:hover:text-sky-400"
               >
                 Entrar em contato
               </a>
@@ -232,7 +235,7 @@ export function Hero() {
 
             <motion.div
               variants={item}
-              className="mt-10 flex items-center gap-6 border-t border-zinc-200/80 pt-6 dark:border-zinc-800/80"
+              className="mt-8 flex flex-wrap items-center gap-4 border-t border-zinc-200/80 pt-5 sm:mt-10 sm:gap-6 sm:pt-6 dark:border-zinc-800/80"
             >
               <div className="flex items-center gap-2.5">
                 <a
@@ -262,7 +265,7 @@ export function Hero() {
                 </a>
               </div>
 
-              <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800" />
+              <div className="hidden h-6 w-px bg-zinc-200 sm:block dark:bg-zinc-800" />
 
               <div className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
                 <span className="font-semibold text-zinc-900 dark:text-zinc-200">~2 anos</span> exp. Dev •{" "}
@@ -276,25 +279,25 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5"
+            className="min-w-0 lg:col-span-5"
           >
             <div className="overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xl shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900/90 dark:shadow-black/40">
               {/* Barra de título do Console */}
-              <div className="flex items-center justify-between border-b border-zinc-200 bg-zinc-50 px-4 py-3 dark:border-zinc-800 dark:bg-zinc-950/80">
-                <div className="flex items-center gap-2">
-                  <Terminal size={14} className="text-sky-500" />
-                  <span className="font-mono text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-zinc-50 px-3.5 py-2.5 sm:px-4 sm:py-3 dark:border-zinc-800 dark:bg-zinc-950/80">
+                <div className="flex min-w-0 items-center gap-2">
+                  <Terminal size={14} className="shrink-0 text-sky-500" />
+                  <span className="truncate font-mono text-[11px] font-semibold text-zinc-700 sm:text-xs dark:text-zinc-300">
                     qa-pipeline — helpdesk-pro
                   </span>
                 </div>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-emerald-500/10 px-2 py-0.5 font-mono text-[11px] font-medium text-emerald-600 dark:text-emerald-400">
-                  <ShieldCheck size={12} />
+                <span className="inline-flex shrink-0 items-center gap-1 rounded-md bg-emerald-500/10 px-2 py-0.5 font-mono text-[10px] font-medium text-emerald-600 sm:gap-1.5 sm:text-[11px] dark:text-emerald-400">
+                  <ShieldCheck size={12} className="shrink-0" />
                   CI PASSING (90/90)
                 </span>
               </div>
 
               {/* Seletor de Camadas da Pirâmide de Testes */}
-              <div className="grid grid-cols-3 gap-1 border-b border-zinc-200 bg-zinc-100/70 p-1.5 dark:border-zinc-800 dark:bg-zinc-950/50">
+              <div className="grid grid-cols-3 gap-1 border-b border-zinc-200 bg-zinc-100/70 p-1 sm:p-1.5 dark:border-zinc-800 dark:bg-zinc-950/50">
                 {(["e2e", "api", "unit"] as LayerId[]).map((layerKey) => {
                   const active = activeLayer === layerKey;
                   const suite = testSuites[layerKey];
@@ -303,7 +306,7 @@ export function Hero() {
                       key={layerKey}
                       type="button"
                       onClick={() => handleRunSuite(layerKey)}
-                      className={`flex flex-col items-start rounded-lg px-3 py-2 text-left transition-all ${
+                      className={`flex min-w-0 flex-col items-start rounded-lg px-2 py-1.5 text-left transition-all sm:px-3 sm:py-2 ${
                         active
                           ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-800 dark:text-white"
                           : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
@@ -312,8 +315,8 @@ export function Hero() {
                       <span className="font-mono text-[11px] font-semibold uppercase tracking-tight">
                         {layerKey.toUpperCase()}
                       </span>
-                      <span className="mt-0.5 text-[11px] text-zinc-500 dark:text-zinc-400">
-                        {suite.count} testes • {suite.duration}
+                      <span className="mt-0.5 w-full truncate text-[10px] text-zinc-500 sm:text-[11px] dark:text-zinc-400">
+                        {suite.count} <span className="hidden sm:inline">testes</span> • {suite.duration}
                       </span>
                     </button>
                   );
@@ -321,16 +324,16 @@ export function Hero() {
               </div>
 
               {/* Corpo do Terminal: Comando e Specs */}
-              <div className="p-4">
-                <div className="flex items-center justify-between rounded-lg bg-zinc-900 px-3 py-2 font-mono text-xs text-zinc-300 dark:bg-zinc-950">
-                  <span className="truncate">
+              <div className="p-3 sm:p-4">
+                <div className="flex items-center justify-between gap-2 rounded-lg bg-zinc-900 px-2.5 py-2 font-mono text-[11px] text-zinc-300 sm:px-3 sm:text-xs dark:bg-zinc-950">
+                  <span className="min-w-0 flex-1 truncate">
                     <span className="text-emerald-400">$</span> {currentSuite.command}
                   </span>
                   <button
                     type="button"
                     onClick={() => handleRunSuite(activeLayer)}
                     title="Reexecutar camada"
-                    className="ml-2 inline-flex shrink-0 items-center gap-1 rounded bg-zinc-800 px-2 py-0.5 text-[10px] text-sky-400 transition-colors hover:bg-zinc-700"
+                    className="inline-flex shrink-0 items-center gap-1 rounded bg-zinc-800 px-2 py-0.5 text-[10px] text-sky-400 transition-colors hover:bg-zinc-700"
                   >
                     <Play size={10} />
                     Run
@@ -345,23 +348,23 @@ export function Hero() {
                   {currentSuite.specs.map((spec) => (
                     <div
                       key={spec.name}
-                      className="flex items-start justify-between gap-3 rounded-lg border border-zinc-200/70 bg-zinc-50/60 p-2.5 dark:border-zinc-800/70 dark:bg-zinc-950/40"
+                      className="flex items-start justify-between gap-2.5 rounded-lg border border-zinc-200/70 bg-zinc-50/60 p-2.5 sm:gap-3 dark:border-zinc-800/70 dark:bg-zinc-950/40"
                     >
-                      <div className="flex items-start gap-2.5 min-w-0">
+                      <div className="flex min-w-0 items-start gap-2 sm:gap-2.5">
                         <CheckCircle2
                           size={15}
                           className="mt-0.5 shrink-0 text-emerald-500 dark:text-emerald-400"
                         />
                         <div className="min-w-0">
-                          <p className="font-mono text-xs font-semibold text-zinc-800 dark:text-zinc-200">
+                          <p className="break-words font-mono text-[11px] font-semibold text-zinc-800 sm:text-xs dark:text-zinc-200">
                             {spec.name}
                           </p>
-                          <p className="mt-0.5 text-xs text-zinc-600 dark:text-zinc-400">
+                          <p className="mt-0.5 text-[11px] leading-snug text-zinc-600 sm:text-xs dark:text-zinc-400">
                             {spec.assertion}
                           </p>
                         </div>
                       </div>
-                      <span className="shrink-0 font-mono text-[11px] text-zinc-400 dark:text-zinc-500">
+                      <span className="shrink-0 font-mono text-[10px] text-zinc-400 sm:text-[11px] dark:text-zinc-500">
                         {spec.time}
                       </span>
                     </div>
@@ -369,16 +372,16 @@ export function Hero() {
                 </div>
 
                 {/* Rodapé do Console com link para o Plano de QA real */}
-                <div className="mt-4 flex items-center justify-between border-t border-zinc-200/80 pt-3 text-xs dark:border-zinc-800/80">
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-zinc-200/80 pt-3 text-xs dark:border-zinc-800/80">
                   <span className="flex items-center gap-1.5 font-mono text-[11px] text-zinc-500 dark:text-zinc-400">
-                    <Layers size={13} className="text-sky-500" />
-                    Runner: {currentSuite.runner}
+                    <Layers size={13} className="shrink-0 text-sky-500" />
+                    <span className="truncate">Runner: {currentSuite.runner}</span>
                   </span>
                   <a
                     href="https://github.com/ArthurSkl/helpdesk-pro/blob/main/docs/QA.md"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 font-mono text-[11px] font-semibold text-sky-600 hover:underline dark:text-sky-400"
+                    className="inline-flex shrink-0 items-center gap-1 font-mono text-[11px] font-semibold text-sky-600 hover:underline dark:text-sky-400"
                   >
                     Ver docs/QA.md
                     <ExternalLink size={11} />
