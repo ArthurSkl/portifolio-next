@@ -13,12 +13,14 @@ function FeaturedProject({ project }: { project: Project }) {
           <div className="min-w-0 lg:col-span-7">
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 rounded-md bg-sky-500/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-sky-600 sm:text-xs dark:text-sky-400">
-                ★ Case Principal Full Stack & QA
+                ★ Case Principal Full Stack & Arquitetura
               </span>
-              <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-emerald-600 sm:text-xs dark:text-emerald-400">
-                <ShieldCheck size={13} className="shrink-0" />
-                90 Testes Automatizados em CI
-              </span>
+              {project.featuredBadge && (
+                <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] font-medium text-emerald-600 sm:text-xs dark:text-emerald-400">
+                  <ShieldCheck size={13} className="shrink-0" />
+                  {project.featuredBadge}
+                </span>
+              )}
             </div>
 
             <h3 className="text-xl font-extrabold tracking-tight text-zinc-900 sm:text-3xl dark:text-white">
@@ -83,20 +85,16 @@ function FeaturedProject({ project }: { project: Project }) {
               ))}
             </ul>
 
-            <div className="mt-4 grid grid-cols-3 gap-1.5 border-t border-zinc-200/80 pt-3.5 text-center sm:mt-5 sm:gap-2 sm:pt-4 dark:border-zinc-800/80">
-              <div className="min-w-0 rounded-lg bg-zinc-50 px-1.5 py-2 sm:p-2 dark:bg-zinc-900">
-                <p className="font-mono text-xs font-bold text-zinc-900 sm:text-sm dark:text-white">Unit</p>
-                <p className="truncate font-mono text-[10px] text-zinc-500">node:test</p>
+            {project.metrics && project.metrics.length > 0 && (
+              <div className="mt-4 grid grid-cols-3 gap-1.5 border-t border-zinc-200/80 pt-3.5 text-center sm:mt-5 sm:gap-2 sm:pt-4 dark:border-zinc-800/80">
+                {project.metrics.map((metric) => (
+                  <div key={metric.label} className="min-w-0 rounded-lg bg-zinc-50 px-1.5 py-2 sm:p-2 dark:bg-zinc-900">
+                    <p className="font-mono text-xs font-bold text-zinc-900 sm:text-sm dark:text-white">{metric.label}</p>
+                    <p className="truncate font-mono text-[10px] text-zinc-500">{metric.sub}</p>
+                  </div>
+                ))}
               </div>
-              <div className="min-w-0 rounded-lg bg-zinc-50 px-1.5 py-2 sm:p-2 dark:bg-zinc-900">
-                <p className="font-mono text-xs font-bold text-zinc-900 sm:text-sm dark:text-white">API</p>
-                <p className="truncate font-mono text-[10px] text-zinc-500">Supertest</p>
-              </div>
-              <div className="min-w-0 rounded-lg bg-zinc-50 px-1.5 py-2 sm:p-2 dark:bg-zinc-900">
-                <p className="font-mono text-xs font-bold text-zinc-900 sm:text-sm dark:text-white">E2E</p>
-                <p className="truncate font-mono text-[10px] text-zinc-500">Cypress</p>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </article>

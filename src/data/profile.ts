@@ -139,9 +139,39 @@ export type Project = {
   code?: string;
   demo?: string;
   featured?: boolean;
+  featuredBadge?: string;
+  metrics?: { label: string; sub: string }[];
 };
 
 export const projects: Project[] = [
+  {
+    name: "ERP Estoque & E-commerce Multi-Tenant (SaaS)",
+    description:
+      "Plataforma SaaS multi-tenant que integra ERP de Controle de Estoque Auditável (Kardex imutável, multi-depósito, Curva ABC e CMV em centavos inteiros) com vitrine e-commerce por loja. Isolamento estrito por organização via Row-Level Security (PostgreSQL RLS), controle de concorrência com locks pessimistas (FOR UPDATE) e suíte automatizada com Vitest e Playwright.",
+    stack: [
+      "Next.js 16",
+      "TypeScript",
+      "PostgreSQL (RLS)",
+      "Drizzle ORM",
+      "Better Auth",
+      "Vitest & Playwright",
+    ],
+    highlights: [
+      "Isolamento multi-tenant via PostgreSQL RLS (role app_runtime sem BYPASSRLS)",
+      "Baixa e transferência atômica de estoque com lock FOR UPDATE e Kardex imutável",
+      "BI Comercial com Curva ABC, Giro de Estoque, CMV e cálculos em centavos inteiros",
+      "Vitrine pública por filial com checkout completo, cupons e webhook HMAC",
+    ],
+    featured: true,
+    featuredBadge: "68 Testes Vitest + E2E Playwright",
+    metrics: [
+      { label: "RLS", sub: "PostgreSQL" },
+      { label: "Vitest", sub: "19 suítes" },
+      { label: "E2E", sub: "Playwright" },
+    ],
+    code: "https://github.com/ArthurSkl/ecommerce-controle-estoque",
+    demo: "https://ecommerce-controle-estoque.vercel.app/loja/loja-modelo",
+  },
   {
     name: "HelpDesk Pro",
     description:
@@ -153,7 +183,6 @@ export const projects: Project[] = [
       "Testes unitários, de API e E2E",
       "CI com evidências",
     ],
-    featured: true,
     code: "https://github.com/ArthurSkl/helpdesk-pro",
     demo: "https://helpdesk-pro-chi.vercel.app",
   },
