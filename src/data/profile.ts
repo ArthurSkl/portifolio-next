@@ -4,7 +4,7 @@ export const profile = {
   role: "Desenvolvedor Full Stack & Analista de QA",
   roles: ["Full Stack", "QA & Testes Automatizados", "Análise de Dados"],
   location: "Campo Grande - MS, Brasil",
-  email: "arthursklt@hotmail.com",
+  email: "devfrantz@hotmail.com",
   phone: "(67) 99133-3349",
   linkedin: "https://www.linkedin.com/in/arthurfrantz",
   github: "https://github.com/ArthurSkl",
@@ -105,18 +105,19 @@ export const skillCategories: SkillCategory[] = [
   {
     icon: "database",
     title: "Banco de Dados",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "Modelagem SQL"],
+    skills: ["PostgreSQL (RLS)", "Drizzle ORM", "MySQL", "MongoDB", "SQLite", "Modelagem SQL"],
   },
   {
     icon: "bug",
     title: "Qualidade & Automação (QA)",
     skills: [
+      "Playwright (E2E)",
+      "Vitest (Unit & Integração)",
       "Cypress (E2E)",
       "Selenium WebDriver",
       "Supertest (API)",
       "JUnit & node:test",
       "Pirâmide de Testes (3 Camadas)",
-      "Planos de Teste & BDD",
     ],
   },
   {
@@ -158,7 +159,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       "Isolamento multi-tenant via PostgreSQL RLS (role app_runtime sem BYPASSRLS)",
-      "Baixa e transferência atômica de estoque com lock FOR UPDATE e Kardex imutável",
+      "Baixa e transferência de estoque com lock FOR UPDATE e Kardex imutável",
       "BI Comercial com Curva ABC, Giro de Estoque, CMV e cálculos em centavos inteiros",
       "Vitrine pública por filial com checkout completo, cupons e webhook HMAC",
     ],

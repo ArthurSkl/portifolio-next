@@ -75,4 +75,4 @@ src/
 
 - **LinkedIn:** [linkedin.com/in/arthurfrantz](https://www.linkedin.com/in/arthurfrantz)
 - **GitHub:** [github.com/ArthurSkl](https://github.com/ArthurSkl)
-- **E-mail:** [arthursklt@hotmail.com](mailto:arthursklt@hotmail.com)
+- **E-mail:** [devfrantz@hotmail.com](mailto:devfrantz@hotmail.com)
